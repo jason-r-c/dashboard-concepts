@@ -1,0 +1,258 @@
+/* ################################################ */
+/* ### Anthropos branding                       ### */
+/* ################################################ */
+
+/* Include brand guideline fonts */
+@font-face {
+    font-family: 'MuseoSans_300.otf';
+    src: url("assets/MuseoSans_300.otf");
+}  
+@font-face {
+    font-family: 'MuseoSans_700.otf';
+    src: url("assets/MuseoSans_700.otf");
+}  
+
+/* Apply brand font everywhere */
+* {
+    font-family: 'MuseoSans_300.otf';
+}
+
+/* Use important as phil overrides the brand font */
+textarea {
+    font-family: 'MuseoSans_300.otf' !important;
+}
+
+/* Apply thicker brand font to sub titles */
+.profile-info p,
+.reports-container p,
+.iotaa-card-head button, 
+.iotaa-card-head p {
+    font-family: "MuseoSans_700.otf";
+}
+
+/* >>>            <<< */
+/* >>> Header bar <<< */
+/* >>>            <<< */
+
+.header {
+    /* background-color: #efefef; */
+    background-color: #00adee;
+}
+.header-left-you>div {
+    margin: 0;
+}
+
+/* >>>                             <<< */
+/* >>> Primary dashboard: Left cog <<< */
+/* >>>                             <<< */
+
+/**
+ * Sidear generics
+ */
+div[name="Iotaa.localOfficeLandingPageLeftCog"] .iotaa-sidebar {
+    background-color: #efefef;
+}
+
+.logo img {
+    max-width: 100%;
+    /* max-height: 100%; */
+    /* padding: 40px 20px 0 20px; */
+    width: 40%;
+}
+
+/**
+ * Logged in user
+ */
+div[name="Iotaa.localOfficeLandingPageLeftCog"] .sidebar-menu {
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 40px;
+    padding: 0;
+    margin-bottom: 30px;
+}
+div[name="Iotaa.localOfficeLandingPageLeftCog"] .profile-info {
+    background: transparent;
+    color: black;
+    text-align: left;
+    margin-left: 22px;
+    margin-left: 0px;
+    padding-left: 10px;
+    /* border-bottom: 1px solid grey; */
+}
+div[name="Iotaa.localOfficeLandingPageLeftCog"] .profile-info > p:first-child {
+    font-size: 2.0rem;
+    color: #1f3a54;
+}
+
+/**
+ * Useful reports
+ */
+.sidebar-menu.useful-reports {
+    border-bottom: 1px solid #dadada;
+}
+.useful-reports .svg-remove-inv {
+    background: url(demo1/tablet/page1_files/svg/remove-inv.svg) no-repeat center center;
+    border: none;    
+    height: 38px;
+    font-size: 14px;
+    margin-top: -3px;
+    margin-right: 20px;
+}
+div[name="Iotaa.localOfficeLandingPageLeftCog"] .useful-reports .reports-row .btn:nth-child(1) {
+    margin-right: 0px;
+    border-bottom: 0;
+    /* width: 225px; */
+}
+
+/**
+ * Avaialable reports 
+ */
+div[name="Iotaa.localOfficeLandingPageLeftCog"] .available-reports .btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+div[name="Iotaa.localOfficeLandingPageLeftCog"] .available-reports .slc-btn > select {
+    max-width: 100%;
+    padding-left: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/**
+ * Misc.
+ */
+ div[name="Iotaa.localOfficeLandingPageLeftCog"] .reports-sub-heading {
+    background: transparent;    
+    text-align: left;
+    margin-left: 22px;
+    margin-left: 0px;
+    padding-left: 10px;
+    /* border-bottom: 1px solid grey; */
+    font-size: 2.0rem;
+    color: #1f3a54;
+}
+ div[name="Iotaa.localOfficeLandingPageLeftCog"] .reports-container .btn {
+    height: 35px;
+    font-size: 14px;
+    padding: 0px 2px;
+    padding-left: 20px;
+    margin-left: 0px;
+}
+div[name="Iotaa.localOfficeLandingPageLeftCog"] .btn {
+    height: 48px;
+    margin: 4px 0px;
+    border-radius: 5px;
+    border: 1px solid #1f3a54;
+    /* background: #1f3a54; */
+    color: white;
+    color: #1f3a54;
+    border: 0;
+    border-bottom: 1px solid #dadada;
+    border-radius: 0px;
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    height: 56px;
+}
+
+/* >>>                              <<< */
+/* >>> Primary dashboard: Right cog <<< */
+/* >>>                              <<< */
+
+div[name="Iotaa.localOfficeLandingPageRightCog"] .iotaa-card .iotaa-card-head {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0px 5px;
+    background-color: transparent;
+    /* border-bottom: 1px solid grey; */
+}
+.btn {
+    background-color: transparent;
+}
+div[name="Iotaa.localOfficeLandingPageRightCog"] .iotaa-card {
+    margin: 10px;
+    margin: 0;
+    border-radius: 0px;
+    border: 1px solid #efefef;
+}
+
+.normalise-anchor-style {
+    text-decoration: none; 
+    color: unset; 
+    margin-left: 5px; 
+    margin-right: 0px;    
+    margin-right: 0;    
+}
+
+/* @JC 4/12/18: remove incorrect margin for card green arrow icon */
+a.normalise-anchor-style {
+    margin-right: 0;
+}
+
+/* @JC 3/12/18: reduce padding left to zero for card heading */
+div[name="Iotaa.localOfficeLandingPageRightCog"] .iotaa-card .iotaa-card-head, 
+div[name="Iotaa.localOfficeLandingPageRightCog"] .iotaa-card .iotaa-card-head p, 
+div[name="Iotaa.localOfficeLandingPageRightCog"] .iotaa-card .iotaa-card-head button {
+    padding-left: 0px;
+}
+
+/* @JC 3/12/18: add some space to the left of the card content */
+.iotaa-card-head + *,
+.iotaa-card-list-row {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* @JC 3/12/18: add some space to the left of card table content.  */
+.iotaa-card-head + * .csv-table {
+    min-width: 95%;
+    margin-left: 10px;
+}
+
+.iotaa-panels > div[name*='Right'] {
+    /* display: flex;
+    background-color: #f9f9f9;
+    flex-direction: column;
+    flex-grow: 1;
+    order: 2; */
+    background: #efefef;
+}
+
+div[name="Iotaa.localOfficeLandingPageRightCog"] .main-body {
+    text-align: left;
+    background: #efefef;
+}
+
+
+/**
+ * Misc.
+ */
+h3, div[name="Iotaa.localOfficeLandingPageRightCog"] .h3 {
+    color: #1f3a54;
+}
+/* ################################################ */
+/* ### old stuff                                ### */
+/* ################################################ */
+
+.page1 {
+    background-color: #fff;
+}
+
+.page2 {
+    background-color: #bbb;
+}
+
+.page3 {
+    background-color: #777;
+}
+
+.page4 {
+    background-color: #333;
+    color: #fff;
+}

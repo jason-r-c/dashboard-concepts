@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="headOfficeLandingPageRightCog ( Head Office Dashboard )" timestamp="2019-02-08T12:46:11" hostname="localhost" time="0.035" errors="0" tests="4" skipped="0" disabled="0" failures="0">
+  <testcase classname="headOfficeLandingPageRightCog ( Head Office Dashboard )" name="iotaa.headOfficeLandingPageRightCog.Methods: main.js - postModelCreate" time="0" />
+  <testcase classname="headOfficeLandingPageRightCog ( Head Office Dashboard )" name="iotaa.headOfficeLandingPageRightCog.Methods: Main Alerts - pumpCo.user.action.list.response" time="0.005" />
+  <testcase classname="headOfficeLandingPageRightCog ( Head Office Dashboard )" name="iotaa.headOfficeLandingPageRightCog.Methods: orderByCreatedOn" time="0" />
+  <testcase classname="headOfficeLandingPageRightCog ( Head Office Dashboard )" name="iotaa.headOfficeLandingPageRightCog.Methods: my.$round" time="0" />
+ </testsuite>
+</testsuites>

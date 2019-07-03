@@ -1,0 +1,100 @@
+/* ################################################ */
+/* ### Anthropos branding                       ### */
+/* ################################################ */
+
+/* Include brand guideline fonts */
+@font-face {
+    font-family: 'MuseoSans_300.otf';
+    src: url("assets/MuseoSans_300.otf");
+}  
+@font-face {
+    font-family: 'MuseoSans_700.otf';
+    src: url("assets/MuseoSans_700.otf");
+}  
+
+/* Apply brand font everywhere */
+* {
+    font-family: 'MuseoSans_300.otf';
+}
+
+/* Use important as phil overrides the brand font */
+textarea {
+    font-family: 'MuseoSans_300.otf' !important;
+}
+
+/* Apply thicker brand font to sub titles */
+/* .profile-info p,
+.reports-container p,
+.iotaa-card-head button, 
+.iotaa-card-head p {
+    font-family: "MuseoSans_700.otf";
+} */
+
+.app-lozenge h3 {
+    font-family: "MuseoSans_700.otf";
+}
+
+.app-header h2,
+.app-header h2 span {
+    font-family: "MuseoSans_700.otf";
+}
+
+/* >>>             <<< */
+/* >>> Home screen <<< */
+/* >>>             <<< */
+
+div[name="Iotaa.helperLandingPageRightCog"] .app-sub-header img {
+    grid-column: 2;
+    /* height: 80px; */
+    width: 100px;
+    height: auto;
+}
+
+.anthropos-demo-fa-btn {
+    flex-direction: column;
+    display: flex;
+    text-decoration: none;
+}
+
+.anthropos-demo-fa-green-circle {
+    text-decoration: none;
+
+}
+
+.anthropos-demo-fa-alert {
+    text-decoration: none;
+    color: black;
+}
+
+.anthropos-demo-fa-empty-btn {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* >>>               <<< */
+/* >>> Packge screen <<< */
+/* >>>               <<< */
+
+.anthropos-demo-fa-appheader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* display: flex; */
+    min-height: 80px;
+    height: 80px;
+    /* flex-wrap: wrap; */
+    /* justify-content: flex-end; */
+    /* background: white; */
+    max-width: 800px;
+}
+
+.app-header {
+    padding: 5px;
+}
+
+/* Activiy > date picker */
+.anthropos-demo-fa-date-picker{
+    flex-grow: 1;
+}

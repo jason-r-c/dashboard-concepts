@@ -1,0 +1,39 @@
+{
+  "name": "aos-demo-casper",
+  "version": "1.0.0",
+  "description": "aos-demo-casper: Anthrpos branded demo",
+  "main": "server/index.js",
+  "scripts": {
+    "//test": "== TEST ==",
+    "test.1": "echo 'run some tests'",
+    "test": "npm run test.1 && exit 0",
+    "//build": "== BUILD ==",
+    
+    "//build.clean.old": "rm -Rf deploy",
+    "build.clean": "rm -Rf deploy",
+
+    "//build.deploy.old": "mkdir deploy; cp -R clients deploy; cp -R server deploy; cp package.json deploy; cp package-lock.json deploy; cp -R etc deploy;",    
+    "build.deploy": "mkdir deploy; cp -R clients deploy; cp package.json deploy; cp package-lock.json deploy;",    
+
+    "build.tar": "tar -zcvf anthropos-branded-demo.tar.gz -C deploy .",
+    
+    "//build-old": "npm run build.clean; npm run build.deploy; npm run build.tar; npm run build.clean;",
+    "build": "npm run build.clean; npm run build.deploy; npm run build.tar",
+
+    "//dev": "== DEV ==",
+    "dev": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git@gitlab.aws.anthropos.io:jcarney/aos-demo-casper.git"
+  },
+  "author": "Andy Monis",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "reloadify": "^0.2.2"
+  }
+}
