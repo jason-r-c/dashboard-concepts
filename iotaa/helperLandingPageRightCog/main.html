@@ -1,0 +1,154 @@
+<!-- // Main wrapper -->
+<div name="home" class="screen iotaa-main">
+  <div class="main-header">
+    <h2 class="breadcrumb">Helper Home</h2>
+    <!-- <p class="mobile-menu">
+      Mobile menu
+    </p> -->
+  </div>
+
+  <!-- // Main body -->
+  <div class="main-body">
+    <!-- <div class="iotaa-alert">
+      <h2 class="iotaa-h2">Incident alert</h2>
+
+      <p>Patient John Johnson has been involved in an incident </p>
+
+      <p>Location of the incident has been recorded in the kitchen</p>
+    </div> -->
+
+
+    <!-- ALERTS -->
+    <div data-bind="css:{'is-alert':$data.notifications().length>0}" class="iotaa-card">
+        <!-- <h3 class="iotaa-card-title">Alerts&nbsp(<span data-bind="text:$data.notifications().length"></span>)</h3> -->
+        <button data-bind="click: $data.openNotifications" class="btn h3">Alerts</button>
+        <!-- ko if:$data.notifications().length===0 -->
+            <p>no high priority alerts</p>
+        <!-- /ko -->
+        <div data-bind="foreach:$data.notifications" class="iotaa-card-list">
+            <div>
+                <img data-bind="attr:{src:$data.activity.smallIcon.url}"></img>
+                <p data-bind="text:$data.description"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- NOTIFICATIONS -->
+    <div class="iotaa-card">
+        <button data-bind="click: $data.openNotifications" class="btn h3">Notifications</button> 
+        <!-- ko if:$data.notifications().length===0 -->
+          <p>no notifications</p>
+        <!-- /ko -->
+
+        <div data-bind="foreach:$data.lowPriorityNotifications" class="iotaa-card-list">
+          <!-- ko text: console.log( "$data is:" ) --> <!-- /ko -->
+          <!-- ko text: console.log( $parent ) --> <!-- /ko -->
+            <div>
+                <img data-bind="attr:{src:$data.activity.smallIcon.url}"></img>
+                <p data-bind="text:$data.description"></p>
+                <p data-bind="text: the.formatDate( $data.activity.published )" style="flex-grow: 2;"></p>
+                <p data-bind="text: the.formatTime( $data.activity.published )" style="align-self: baseline;"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- //ko text: console.log( "$data is:" ) --> <!-- //-/ko -->
+    <!-- //ko text: console.log( $data ) --> <!-- //-/ko -->
+
+    <!-- ACTIONS -->
+    <div class="iotaa-card">
+        <button data-bind="click:$data.openActions" class="btn h3">Open Actions</button> 
+        <!-- ko if:$data.actions().length===0 -->
+            <p>no open actions</p>
+        <!-- /ko -->
+        <div data-bind="foreach:$data.actions" class="iotaa-card-list">
+          <!-- //ko text: console.log( "$data is:" ) --> <!-- //-/ko -->
+          <!-- //ko text: console.log( $data ) --> <!-- //-/ko -->
+            <div>
+                <p data-bind="text:$data.context.description"></p>
+                <!-- <p data-bind="text:the.formatDate($data.dueBy)"></p> -->
+                <!-- <p data-bind="text:$parent.parseDate($data.dueBy)"></p> -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- VISIT UPDATES -->
+    <div class="iotaa-card">
+        <button data-bind="click:$data.visitUpdates" class="btn h3">Visit Updates</button> 
+        <!-- ko if:$data.events().length===0 -->
+            <p>no updates</p>
+        <!-- /ko -->
+        <div data-bind="foreach:$data.events" class="iotaa-card-list">
+            <div style="display: block">
+              <div style="display: flex; /*flex-direction: row; flex-wrap: wrap;*/">
+
+                <!-- <p data-bind="text:$data.summary"></p> -->
+                <p data-bind="text:$data.value.update"></p>
+                <img data-bind="attr: { src: $parent.carerImg }" style="align-self: flex-start;"></img>
+                <!-- //ko text: console.log( "$data is:" ) --> <!-- //-/ko -->
+                <!-- //ko text: console.log( $parent ) --> <!-- //-/ko -->
+              </div>
+              <p data-bind="text: the.formatDate( $data.dtStart )" style="text-align: right;"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ACTIVITY TODAY -->
+    <div class="iotaa-card">
+        <button data-bind="click:$data.activityToday" class="btn h3">Activity Today</button> 
+        <!-- ko if:$data.events().length===0 -->
+          <p>no activity</p>
+        <!-- /ko -->
+
+        <img data-bind="attr:{src:$data.houseImg}" style="max-width: initial; max-height: initial; width: 100%;"></img>
+    </div>
+
+    <!-- SCHEDULE TODAY -->
+    <div class="iotaa-card schedule-today">
+        <button data-bind="click:$data.scheduleToday" class="btn h3">Schedule Today</button> 
+
+        <!-- ko if:$data.events().length===0 || $data.notifications().length===0  -->
+          <p>no schedule items for today</p>
+        <!-- /ko -->
+
+
+        <!-- Carer visit -->
+        <div data-bind="foreach:$data.events" class="iotaa-card-list">
+          <!-- //ko text: console.log( "scheduled today" ) --> <!-- //-/ko -->
+          <!-- //ko text: console.log( $data ) --> <!-- //-/ko -->
+
+          <div style="flex-direction: row; flex-wrap: wrap;">
+            <p data-bind="text: the.formatTime( $data.dtStart )"></p>
+            <p data-bind="text:$data.summary"></p>
+          </div>
+        </div>
+
+        <!-- Meals on wheels -->
+
+        <div data-bind="foreach:$data.notifications" class="iotaa-card-list">
+          <!-- //ko text: console.log( "meels on wheels is: " ) --> <!-- //-/ko -->
+          <!-- //ko text: console.log( $data ) --> <!-- //-/ko -->
+
+          <div style="flex-direction: row; flex-wrap: wrap;">
+            <!-- <img data-bind="attr:{src:$data.activity.smallIcon.url}"></img> -->
+            <p data-bind="text: the.formatTime( $data.created )"></p>
+            <p data-bind="text: $data.activity.object.displayName"></p>
+          </div>
+        </div>
+
+        <!-- District nurse -->
+        <div data-bind="foreach:$data.events" class="iotaa-card-list">
+          <!-- //ko text: console.log( "mock calendar is: " ) --> <!-- //-/ko -->
+          <!-- //ko text: console.log( $data.nurseAppointment.appointmentTime ) --> <!-- //-/ko -->
+
+          <div style="flex-direction: row; flex-wrap: wrap;">
+            <p data-bind="text: the.formatTime( $data.nurseAppointment.appointmentTime )"></p>
+            <p data-bind="text: $data.nurseAppointment.appointmentInfo"></p>
+        </div>
+    </div>
+
+
+  </div>
+</div>

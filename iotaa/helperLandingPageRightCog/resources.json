@@ -1,0 +1,61 @@
+/*
+    Template Cog resources.json
+
+    The resources.json file contains all of the specifications for the Cog.
+    This includes the source code, the type,
+    the language and capabilities.
+
+    v1.0:
+ */
+{
+    // Basic configuration
+    "script":   [
+      "/iotaa/helperLandingPageRightCog/main.js",
+      "/system/common/roadie/navigation.js",
+      "/iotaa/helperLandingPageRightCog/test/responses.js"
+    ],
+    "html":     "/iotaa/helperLandingPageRightCog/main.html",
+    "style":    "/iotaa/helperLandingPageRightCog/main.css",
+    "lang":     "/iotaa/helperLandingPageRightCog/lang.json",
+    "image":    [
+      "/iotaa/helperLandingPageRightCog/images/helper-dashboard-house.png"
+     ],
+    // The type of cog that is being created. Can be system, platform, or user
+    "cogType": "system",
+    // Params is a generic object for passing in custom / new information
+    "params": {
+    	// Instruct the Pump that you would like the exchange unwrapped into pulses.
+        "unwrapExchange":"true",
+
+        "myCustomProperty": "Hello World",
+
+        "houseImg" : "/PumpHouse/uploads/iotaa/helperLandingPageRightCog/images/helper-dashboard-house.png",
+
+        "carerImg" : "/uploads/iotaa/images/Clara.png"
+    },
+    // Capabilities detail what pulses ( traits ) a Cog can send and what pulses it would like to receive.
+    "capability": [
+        { "direction": "CONSUMER", "trait": "pumpco.system.core.cog", "version": "0.1" },
+        { "direction": "PRODUCER", "trait": "internal.system.toast.update", "version": "0.1" },
+        // Notification Lists (all)
+        {"direction": "PRODUCER","trait": "pumpCo.user.notificationListUnviewed.request", "version": "0.1"},
+        {"direction": "CONSUMER","trait": "pumpCo.user.notificationListUnviewed.response", "version": "0.1"},
+        // Actions
+        {"direction": "PRODUCER","trait": "pumpCo.user.action.list.request", "version": "0.1"},
+        {"direction": "CONSUMER","trait": "pumpCo.user.action.list.response", "version": "0.1"},
+        // Calendar
+        {"direction": "PRODUCER","trait": "pumpCo.user.calendar.list.request", "version": "0.1"},
+        {"direction": "CONSUMER","trait": "pumpCo.user.calendar.list.response", "version": "0.1"},
+        // @JC 22/08/17: attempt Calendar forwarding
+        {"direction": "PRODUCER","trait": "pumpCo.user.forward.request", "version": "0.1"},
+        {"direction": "CONSUMER","trait": "pumpCo.user.forward.response", "version": "0.1"},
+        //  @JC 22/08/17: attempt to get the pulse (which im provived by default by the cog) the official way
+        {"direction": "PRODUCER","trait": "pumpCo.user.contact.list.request", "version": "0.1"},
+        {"direction": "CONSUMER","trait": "pumpCo.user.contact.list.response", "version": "0.1"}
+    ],
+    // Cards detail what Cards need to be loaded ( JS, CSS, HTML ) dynamically ( currently on AOS and PHIL )
+    "cards":[
+        // Example card inclusion. Delete if not required.
+        { "name": "phil/collections/small-rich-card" }
+    ]
+}

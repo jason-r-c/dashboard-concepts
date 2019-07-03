@@ -1,0 +1,12 @@
+/*
+    Template Space resources.json
+
+    v1.0:
+ */
+{
+    "layout":{
+        // Supported core layouts are - flow, tiled, fullOne
+        "type": "iotaa-panels"
+    },
+    "params":{}
+}

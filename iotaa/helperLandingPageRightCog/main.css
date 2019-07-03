@@ -1,0 +1,145 @@
+/* ### Main area ### */
+.screen { display:flex; flex-direction:column; }
+
+/*.screen > .main-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr
+}*/
+
+/* ## Common Componnents ## */
+h2 {
+  color: #693357;
+  font-size: 2.6rem;
+}
+
+.h3 {
+  color: #693357;
+  font-size: 2.0rem;
+  text-align: center;
+}
+
+/* ## Using Grid layout */
+.iotaa-main {
+  /*display: grid;
+  grid-template-columns: 1fr;*/
+  /*grid-template-rows: 16vh 84vh;*/
+}
+
+.main-header {
+  text-align: left;
+  padding-left: 30px;
+  background: white;
+  padding-top: 40px;
+  padding-bottom: 28px;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  display: none;
+}
+
+.main-body {
+  text-align: left;
+  background-color: #f9f9f9;
+}
+
+/* ## iotaa alert */
+.iotaa-alert {
+  background: #ff6e6e;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+h2.iotaa-h2 {
+  color: black;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* ## iotaa card */
+.iotaa-card {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.25);
+    flex-grow: 1;
+}
+
+.iotaa-card-list > div {
+    display: flex;
+    border-bottom: 1px dashed rgba(0,0,0,0.25);
+    align-items: center;
+}
+.iotaa-card-list.collapsed {
+    max-height: 100px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.iotaa-card p {
+  flex-grow: 1;
+  margin-right: 5px;
+}
+
+.iotaa-card img {
+  max-width:32px;
+  max-height: 32px;
+  margin:6px;
+}
+
+.iotaa-card .btn {
+  border-radius: 5px;
+  margin: 2px 0px;
+  height: 40px;
+}
+
+.is-alert {
+  background: #ff6e6e;
+}
+
+/* ## list items within the card */
+li.iotaa-li {
+    margin-left: 20px;
+}
+
+hr.iotaa-hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* ## Task row: Style for rows (which contain other elements) within a task list */
+.task-list-row {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* ## Task checkbox: Style for checboxes within a task list */
+.task-list-checkbox {
+  width: 40px;
+  transform: scale(1);
+  margin-right: 20px;
+}
+
+/* ## Task button: Style for buttons within a task list */
+.task-list-button {
+  height: 48px;
+  margin: 4px 0px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+}
+
+/* Schedule today */
+.schedule-today p {
+  flex: 1;
+}
+
+@media (min-width: 900px) {
+  .screen > .main-body {
+      /*display: flex;
+      flex-wrap: wrap;*/
+      display: grid;
+      grid-template-columns: 1fr 1fr
+  }
+}

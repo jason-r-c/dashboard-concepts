@@ -1,0 +1,7 @@
+{
+    // Home Space Layout
+    "layout":{
+        // OS2 layout parameter
+        "type": "tiled"
+    }
+}
