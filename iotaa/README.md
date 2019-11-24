@@ -1,3 +1,3 @@
 # Dashboard concepts
 
-These are the dashboard concepts for the helper application
+These are the dashboard prototypes for the helper application
