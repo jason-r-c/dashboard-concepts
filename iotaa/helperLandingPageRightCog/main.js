@@ -1,9 +1,3 @@
-/*
- * Pump API and Application 1.0.0
- * Copyright(c) 2016 PumpCo Inc.
- * licensing@pumpco.co.uk
- * http://www.pumpco.co.uk/license
- */
 the.App.onReady(function () {
 
   var mock = {
