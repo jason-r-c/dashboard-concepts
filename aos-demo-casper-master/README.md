@@ -1,4 +1,7 @@
-## Anthropos branded demo screens
+## Branded demo screens
+This is a demo of the A platform functionality mocked for use on a Raspberry Pi. The Pi will be setup during the exhibition for interested individuals to view.
+
+## Contents
 This demo contains static html files and is styled generically.
 
 ## How to use the demo
