@@ -17,5 +17,3 @@ From the command line ( ~/repository/aos-demo-casper ), you can run `npm run bui
 
 ## Jenkins integration
 The Jenkins task can be found at http://jenkins.aws.anthropos.io/jenkins/job/aos-demo-casper/. This builds the tar file, and stores as an artifact which can be downloaded.
-
-## Test commit from windows 10 vm
